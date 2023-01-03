@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch InputScanner",
+            "request": "launch",
+            "mainClass": "conteudo.terminalArgumentos.InputScanner",
+            "projectName": "tipos-variaveis_9f7a62f9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch calculadora",
+            "request": "launch",
+            "mainClass": "conteudo.javadoc.calculadora",
+            "projectName": "tipos-variaveis_9f7a62f9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Usuario",
+            "request": "launch",
+            "mainClass": "conteudo.metodos.Usuario",
+            "projectName": "tipos-variaveis_9f7a62f9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Operadores",
+            "request": "launch",
+            "mainClass": "conteudo.operadores.Operadores",
+            "projectName": "tipos-variaveis_9f7a62f9"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinhaClasse",
+            "request": "launch",
+            "mainClass": "conteudo.terminalArgumentos.MinhaClasse",
+            "projectName": "tipos-variaveis_9f7a62f9"
+        },
+        {
+            "type": "java",
+            "name": "Launch TiposVariaveis",
+            "request": "launch",
+            "mainClass": "conteudo.tiposVariaveis.TiposVariaveis",
+            "projectName": "tipos-variaveis_9f7a62f9"
+        }
+    ]
+}
