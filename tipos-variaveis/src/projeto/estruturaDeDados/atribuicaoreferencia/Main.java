@@ -1,4 +1,4 @@
-package projeto.estruturaDeDados;
+package projeto.estruturaDeDados.atribuicaoreferencia;
 
 public class Main {
     public static void main(String[] args) {
