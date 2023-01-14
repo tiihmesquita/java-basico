@@ -46,7 +46,7 @@ public class Pilha {
                 break;
             }
         }
-
+        stringRetorno+= " ==============\n";
         return stringRetorno;
 
 
