@@ -1,19 +1,20 @@
 package projeto.estruturaDeDados.filas;
 
-public class Fila {
-    private No refNoEntradaFila;
+public class Fila<T>{
+
+    private No<T> refNoEntradaFila;
 
     public Fila(){
         this.refNoEntradaFila = null;
     }
 
-    public void enqueue(Object obj){
-        No novoNo = new No(obj);
+    public void enqueue(T object){
+        No novoNo = new No(object);
         novoNo.setRefNo(refNoEntradaFila);
         refNoEntradaFila = novoNo;
 
     }
-    public Object first(){
+    public T first(){
         if (!isEmpty()){
             No primeiroNo = refNoEntradaFila;
             while(true){
@@ -23,11 +24,11 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo.getObject();
+            return(T) primeiroNo.getObject();
         }
         return null;
     }
-    public Object deQueue(){
+    public T deQueue(){
         if (!isEmpty()){
             No primeiroNo = refNoEntradaFila;
             No auxilarNo = refNoEntradaFila;
@@ -40,7 +41,7 @@ public class Fila {
                     break;
                 }
             }
-            return primeiroNo.getObject();
+            return (T) primeiroNo.getObject();
         }
         return null;
     }
