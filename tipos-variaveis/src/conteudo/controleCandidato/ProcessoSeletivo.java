@@ -14,6 +14,7 @@ public class ProcessoSeletivo {
     }
     static void entrandoEmContato(String candidato) {
     }
+
     static void entrandoEmContato(){
 
         int tentativasRealizadas = 1;
@@ -21,7 +22,7 @@ public class ProcessoSeletivo {
         boolean atendeu = false;
         do{
 
-            atendeu =atender();
+            atendeu = atender();
             continuarTentando = !atendeu;
             if (continuarTentando){
                 tentativasRealizadas++;
