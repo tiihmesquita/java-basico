@@ -6,6 +6,28 @@ public class ListaCircular<T> {
     private int tamanhoLista;
 
 
+    
+
+    public ListaCircular() {
+        this.calda = null;
+        this.cabeca = null;
+        this.tamanhoLista = 0;
+    }
+
+    public void add(T conteudo) {
+        No<T> novoNo = new No<>(conteudo);
+        if(this.tamanhoLista==0){
+            this.cabeca = novoNo;
+            this.calda = this.cabeca;
+            this.cabeca.setNoProximo(calda);
+        }
+        else{
+            novoNo.setNoProximo(this.calda);
+            this.cabeca.setNoProximo(novoNo);
+            this.calda = novoNo;
+        }
+        this.tamanhoLista++;
+    }
 
     public void remove(int index){
         if(index >= this.tamanhoLista){
@@ -69,5 +91,22 @@ public class ListaCircular<T> {
 
         return this.tamanhoLista;
     }
+
+    @Override
+    public String toString() {
+        String strRetorno = "";
+
+        No<T> noAuxiliar = this.calda;
+
+        for(int i=0;i<this.size();i++){
+            strRetorno += "[No{conteudo="+noAuxiliar.getConteudo()+"}]-->";
+            noAuxiliar = noAuxiliar.getNoProximo();
+        }
+
+        strRetorno+= this.size() != 0 ?"(Retorna ao inicio)":"[]";
+
+        return strRetorno;
+    }
+    
 
 }
