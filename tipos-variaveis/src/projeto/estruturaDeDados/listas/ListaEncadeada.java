@@ -22,8 +22,8 @@ public class ListaEncadeada<T> {
             noAuxiliar = noAuxiliar.getProximoNo();
 
         }
-        noAuxiliar = noAuxiliar.getProximoNo();
-
+       noAuxiliar.setProximoNo(novoNo);
+        
 
     }
 
@@ -32,7 +32,7 @@ public class ListaEncadeada<T> {
         validaIndice(index);
         No<T> noAuxiliar = referenciaEntrada;
         No<T> noRetorno = null;
-        for(int i = 0; i < this.size()-1;i++){
+        for(int i = 0; i <= index;i++){
             noRetorno = noAuxiliar;
             noAuxiliar = noAuxiliar.getProximoNo();
 
@@ -63,7 +63,7 @@ public class ListaEncadeada<T> {
         No<T> referenciaAux = referenciaEntrada;
         while(true){
             if (referenciaAux != null){
-                tamanhoLista++;
+                tamanhoLista+=1;
                 if(referenciaAux.getProximoNo()!=null){
                     referenciaAux = referenciaAux.getProximoNo();                }
                 else{
@@ -88,4 +88,25 @@ public class ListaEncadeada<T> {
     public boolean isEmpty(){
         return referenciaEntrada == null ? true:false;
     }
+
+
+
+    @Override
+    public String toString() {
+
+        String srtRetorno = "";
+
+        No<T> noAuxiliar = referenciaEntrada;
+        for(int i=0;i<this.size();i++){
+            srtRetorno += "[No{conteudo=" + noAuxiliar.getConteudo() + "}]--->";
+            noAuxiliar = noAuxiliar.getProximoNo();
+        }
+
+         srtRetorno += "null";
+
+         return srtRetorno;
+    }
+
+
+    
 }
