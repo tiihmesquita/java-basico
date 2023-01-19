@@ -8,6 +8,7 @@ public class ArvoreBinaria<T extends Comparable<T>> {
     public ArvoreBinaria(){
         this.raiz = null;
     }
+    
     public void inserir(T conteudo){
         BinNo<T> novoNo = new BinNo<>(conteudo);
         raiz = inserir(raiz, novoNo);
@@ -35,31 +36,31 @@ public class ArvoreBinaria<T extends Comparable<T>> {
     private void exibirInOrdem(BinNo<T> atual){
         if(atual != null){
             exibirInOrdem(atual.getNoEsq());
-            System.out.println(atual.getConteudo()+",");
+            System.out.print(atual.getConteudo()+",");
             exibirInOrdem(atual.getNoDir());
         }
     }
 
     public void exibirPosOrdem(){
-        System.out.println("\n Exibindo InOrdem");
-        exibirInOrdem(this.raiz);
+        System.out.println("\n Exibindo PosOrdem");
+        exibirPosOrdem(this.raiz);
     }
     private void exibirPosOrdem(BinNo<T> atual){
         if(atual != null){
             exibirPosOrdem(atual.getNoEsq());
             exibirPosOrdem(atual.getNoDir());
-            System.out.println(atual.getConteudo()+",");
+            System.out.print(atual.getConteudo()+",");
             
         }
     }
     public void exibirPreOrdem(){
-        System.out.println("\n Exibindo InOrdem");
-        exibirInOrdem(this.raiz);
+        System.out.println("\n Exibindo PreOrdem");
+        exibirPreOrdem(this.raiz);
     }
     private void exibirPreOrdem(BinNo<T> atual){
         if(atual != null){
 
-            System.out.println(atual.getConteudo()+",");
+            System.out.print(atual.getConteudo()+",");
             exibirPreOrdem(atual.getNoEsq());
             exibirPreOrdem(atual.getNoDir());
                 
