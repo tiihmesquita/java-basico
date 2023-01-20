@@ -1,4 +1,4 @@
-package projeto.estruturaDeDados.equalshashcode;
+package projeto.estruturaDeDados.stack;
 
 public class Carro {
     String marca;
@@ -40,7 +40,11 @@ public class Carro {
         return true;
     }
 
-
+    @Override
+    public String toString() {
+        return "Carro [marca=" + marca + "]";
+    }
+    
 
     
 }
